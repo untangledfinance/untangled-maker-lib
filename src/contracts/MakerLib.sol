@@ -300,7 +300,7 @@ contract MakerLib {
     }
 
     // --- Liquidation ---
-    // triggers a soft liquidation of the DROP collateral
+    // triggers a soft liquidation of the SOT collateral
     // a redeemOrder is submitted to receive DAI back
     function tell() public {
         require(safe, 'MakerLib/not-safe');
@@ -329,8 +329,8 @@ contract MakerLib {
         emit Tell(ink);
     }
 
-    // triggers the payout of a DROP redemption
-    // method can be called multiple times until all DROP is redeemed
+    // triggers the payout of a SOT redemption
+    // method can be called multiple times until all SOT is redeemed
     function unwind() public {
         require(!safe && glad && live, 'MakerLib/not-soft-liquidation');
 
@@ -373,8 +373,8 @@ contract MakerLib {
         emit Cull(tab);
     }
 
-    // recovers DAI from the Tinlake pool by triggering a payout
-    // method can be called multiple times until all DROP is redeemed
+    // recovers DAI from the untangled pool by triggering a payout
+    // method can be called multiple times until all SOT is redeemed
     function recover() public {
         require(!glad, 'MakerLib/not-written-off');
 
