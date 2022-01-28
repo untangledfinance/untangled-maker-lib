@@ -154,7 +154,7 @@ contract MakerLib {
     address public vow;
     JoinLike public daiJoin;
 
-    // Tinlake components
+    // untangled components
     GemLike public gem;
     RedeemLike public pool;
 
@@ -231,7 +231,7 @@ contract MakerLib {
         urn.free(wad);
     }
 
-    // --- DROP Operation ---
+    // --- SOT Operation ---
     // join & exit move the gem directly into/from the urn
     function join(uint256 wad) public auth {
         require(safe && live, 'UntangledManager/bad-state');
