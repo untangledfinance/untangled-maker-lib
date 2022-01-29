@@ -1,5 +1,5 @@
-# untangled-maker-lib
-UntangledManager contract
+# MakerDAO Untangled Direct Liquidation Module
+Untangled Manager contract
 https://github.com/untangledfinance/untangled-maker-lib
 
 ## Vault Operations
